@@ -7,6 +7,8 @@ import { MapView } from './components/MapView';
 import { HistoryChips } from './components/HistoryChips';
 import { FilterBar } from './components/FilterBar';
 import { MetaHead } from './components/MetaHead';
+import { CourierEstimates } from './components/CourierEstimates';
+import { HolidayCalendar, checkIsOpen } from './components/HolidayCalendar';
 import { Globe2, Info, Copy, Check, Navigation } from 'lucide-react';
 
 const HISTORY_KEY = 'pincode_finder_history';
@@ -378,16 +380,22 @@ function App() {
                         </div>
                     </div>
 
+                    <HolidayCalendar isOpen={checkIsOpen()} />
+
                     <button 
                         onClick={handleCopyAddress}
                         className={`
-                            w-full py-3 font-bold text-sm tracking-widest flex items-center justify-center gap-2 border-2 border-black transition-all
+                            w-full mt-4 py-3 font-bold text-sm tracking-widest flex items-center justify-center gap-2 border-2 border-black transition-all
                             ${copied ? 'bg-green-500 text-white border-green-700' : 'bg-white hover:bg-black hover:text-white text-black'}
                         `}
                     >
                         {copied ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
                         {copied ? 'ADDRESS COPIED' : 'COPY ADDRESS'}
                     </button>
+
+                    {distanceToTarget && (
+                        <CourierEstimates distanceKm={parseFloat(distanceToTarget)} />
+                    )}
                  </div>
             )}
         </div>
