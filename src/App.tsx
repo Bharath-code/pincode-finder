@@ -9,6 +9,7 @@ import { FilterBar } from './components/FilterBar';
 import { MetaHead } from './components/MetaHead';
 import { CourierEstimates } from './components/CourierEstimates';
 import { HolidayCalendar, checkIsOpen } from './components/HolidayCalendar';
+import { GoogleAdsense } from './components/GoogleAdsense';
 import { Globe2, Info, Copy, Check, Navigation } from 'lucide-react';
 
 const HISTORY_KEY = 'pincode_finder_history';
@@ -291,6 +292,8 @@ function App() {
                     onClear={clearHistory} 
                 />
                 
+                <GoogleAdsense />
+
                 {error && (
                     <div className="mt-6 p-4 border-2 border-destructive bg-destructive/5 text-destructive font-bold flex items-center gap-2">
                         <Info className="w-5 h-5" />
