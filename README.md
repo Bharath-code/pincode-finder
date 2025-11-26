@@ -6,9 +6,15 @@ A modern, Swiss-Design inspired Pincode Finder for India.
 
 - **Search by Pincode**: Enter a 6-digit pincode to find post office details.
 - **Search by Name**: Enter a Post Office branch name (e.g., "New Delhi").
-- **Visual Mapping**: View the location on an interactive map (OpenStreetMap).
-- **Responsive Design**: Works on Desktop and Mobile.
-- **Swiss Style UI**: Clean, high-contrast, grid-based interface.
+- **Locate Me (GPS)**: Uses your current GPS location to find nearby Pincode and post offices.
+- **Recent Search History**: Saves your last 8 searches for quick access.
+- **State/District Filtering**: Dynamically filters search results by State and District for easier navigation.
+- **Visual Mapping**: View the location of selected post offices on an interactive map (OpenStreetMap).
+- **Distance Indicator**: Shows the approximate distance from your current location to a selected post office.
+- **Copy Address Utility**: Copies the formatted address of a selected post office to your clipboard.
+- **Shareable URLs (Deep Linking)**: Automatically updates the URL with your search query, allowing you to share specific searches.
+- **Responsive Design**: Works seamlessly across desktop and mobile devices.
+- **Swiss Style UI**: Clean, high-contrast, grid-based interface with a focus on functionality and readability.
 
 ## Tech Stack
 
