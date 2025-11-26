@@ -13,6 +13,7 @@ A modern, Swiss-Design inspired Pincode Finder for India.
 - **Distance Indicator**: Shows the approximate distance from your current location to a selected post office.
 - **Copy Address Utility**: Copies the formatted address of a selected post office to your clipboard.
 - **Shareable URLs (Deep Linking)**: Automatically updates the URL with your search query, allowing you to share specific searches.
+- **SEO Optimized**: Dynamic meta tags for better search engine visibility and social sharing.
 - **Offline Mode (PWA)**: Installable as a native-like app with offline caching support.
 - **Responsive Design**: Works seamlessly across desktop and mobile devices.
 - **Swiss Style UI**: Clean, high-contrast, grid-based interface with a focus on functionality and readability.

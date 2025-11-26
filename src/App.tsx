@@ -6,6 +6,7 @@ import { ResultList } from './components/ResultList';
 import { MapView } from './components/MapView';
 import { HistoryChips } from './components/HistoryChips';
 import { FilterBar } from './components/FilterBar';
+import { MetaHead } from './components/MetaHead';
 import { Globe2, Info, Copy, Check, Navigation } from 'lucide-react';
 
 const HISTORY_KEY = 'pincode_finder_history';
@@ -253,6 +254,13 @@ function App() {
 
   return (
     <div className="min-h-screen bg-background flex flex-col font-sans text-foreground selection:bg-primary selection:text-white">
+      <MetaHead 
+        title={selectedItem ? `${selectedItem.Name} (${selectedItem.Pincode})` : lastSearchQuery ? `Search: ${lastSearchQuery}` : undefined}
+        description={selectedItem 
+            ? `Post Office details for ${selectedItem.Name}, ${selectedItem.District}, ${selectedItem.State}. Pincode: ${selectedItem.Pincode}.` 
+            : undefined}
+      />
+      
       {/* Header */}
       <header className="border-b-4 border-black p-6 flex justify-between items-center bg-white sticky top-0 z-50">
         <div className="flex items-center gap-3">
