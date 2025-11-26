@@ -1,4 +1,4 @@
-import type { PostOffice } from '../types';
+import type { PostOffice } from '@/types';
 import { Building2 } from 'lucide-react';
 
 interface ResultListProps {

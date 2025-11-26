@@ -1,0 +1,60 @@
+{
+  "[project]/src/components/GoogleAdsense.tsx [app-client] (ecmascript, next/dynamic entry)": {
+    "id": "[project]/src/components/GoogleAdsense.tsx [app-client] (ecmascript, next/dynamic entry)",
+    "files": [
+      "static/chunks/src_components_GoogleAdsense_tsx_af1759d3._.js",
+      "static/chunks/src_components_GoogleAdsense_tsx_b5619da8._.js"
+    ]
+  },
+  "[project]/src/components/HolidayCalendar.tsx [app-client] (ecmascript, next/dynamic entry)": {
+    "id": "[project]/src/components/HolidayCalendar.tsx [app-client] (ecmascript, next/dynamic entry)",
+    "files": [
+      "static/chunks/src_components_HolidayCalendar_tsx_f8dd41e2._.js",
+      "static/chunks/src_components_HolidayCalendar_tsx_b5619da8._.js"
+    ]
+  },
+  "[project]/src/components/CourierEstimates.tsx [app-client] (ecmascript, next/dynamic entry)": {
+    "id": "[project]/src/components/CourierEstimates.tsx [app-client] (ecmascript, next/dynamic entry)",
+    "files": [
+      "static/chunks/_e9353420._.js",
+      "static/chunks/src_components_CourierEstimates_tsx_b5619da8._.js"
+    ]
+  },
+  "[project]/src/components/FilterBar.tsx [app-client] (ecmascript, next/dynamic entry)": {
+    "id": "[project]/src/components/FilterBar.tsx [app-client] (ecmascript, next/dynamic entry)",
+    "files": [
+      "static/chunks/_f50749e4._.js",
+      "static/chunks/src_components_FilterBar_tsx_b5619da8._.js"
+    ]
+  },
+  "[project]/src/components/HistoryChips.tsx [app-client] (ecmascript, next/dynamic entry)": {
+    "id": "[project]/src/components/HistoryChips.tsx [app-client] (ecmascript, next/dynamic entry)",
+    "files": [
+      "static/chunks/_b5c75aba._.js",
+      "static/chunks/src_components_HistoryChips_tsx_b5619da8._.js"
+    ]
+  },
+  "[project]/src/components/MapView.tsx [app-client] (ecmascript, next/dynamic entry)": {
+    "id": "[project]/src/components/MapView.tsx [app-client] (ecmascript, next/dynamic entry)",
+    "files": [
+      "static/chunks/node_modules_de241782._.js",
+      "static/chunks/src_components_MapView_tsx_8bb25755._.js",
+      "static/chunks/node_modules_leaflet_dist_leaflet_ef5f0413.css",
+      "static/chunks/src_components_MapView_tsx_b5619da8._.js"
+    ]
+  },
+  "[project]/src/components/ResultList.tsx [app-client] (ecmascript, next/dynamic entry)": {
+    "id": "[project]/src/components/ResultList.tsx [app-client] (ecmascript, next/dynamic entry)",
+    "files": [
+      "static/chunks/_c04fd435._.js",
+      "static/chunks/src_components_ResultList_tsx_b5619da8._.js"
+    ]
+  },
+  "[project]/src/components/SearchBar.tsx [app-client] (ecmascript, next/dynamic entry)": {
+    "id": "[project]/src/components/SearchBar.tsx [app-client] (ecmascript, next/dynamic entry)",
+    "files": [
+      "static/chunks/_51c60b4d._.js",
+      "static/chunks/src_components_SearchBar_tsx_b5619da8._.js"
+    ]
+  }
+}

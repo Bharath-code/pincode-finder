@@ -6,9 +6,13 @@ import L from 'leaflet';
 import icon from 'leaflet/dist/images/marker-icon.png';
 import iconShadow from 'leaflet/dist/images/marker-shadow.png';
 
+// Robustly resolve icon URLs for Next.js/Webpack
+const iconUrl = (icon as any).src || (typeof icon === 'string' ? icon : 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon.png');
+const shadowUrl = (iconShadow as any).src || (typeof iconShadow === 'string' ? iconShadow : 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-shadow.png');
+
 const DefaultIcon = L.icon({
-    iconUrl: icon,
-    shadowUrl: iconShadow,
+    iconUrl,
+    shadowUrl,
     iconSize: [25, 41],
     iconAnchor: [12, 41],
     popupAnchor: [1, -34],

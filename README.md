@@ -1,9 +1,10 @@
 # Pincode Finder
 
-A modern, Swiss-Design inspired Pincode Finder for India.
+A modern, Swiss-Design inspired Pincode Finder for India, now powered by Next.js for enhanced SEO and performance.
 
 ## Features
 
+- **Programmatic SEO**: Static pages for popular pincodes (e.g., `/pincode/560001`) for improved search engine visibility.
 - **Search by Pincode**: Enter a 6-digit pincode to find post office details.
 - **Search by Name**: Enter a Post Office branch name (e.g., "New Delhi").
 - **Locate Me (GPS)**: Uses your current GPS location to find nearby Pincode and post offices.
@@ -14,18 +15,20 @@ A modern, Swiss-Design inspired Pincode Finder for India.
 - **Copy Address Utility**: Copies the formatted address of a selected post office to your clipboard.
 - **Shareable URLs (Deep Linking)**: Automatically updates the URL with your search query, allowing you to share specific searches.
 - **SEO Optimized**: Dynamic meta tags for better search engine visibility and social sharing.
-- **Offline Mode (PWA)**: Installable as a native-like app with offline caching support.
+- **Offline Mode (PWA)**: Installable as a native-like app with offline caching support (via Serwist).
 - **Responsive Design**: Works seamlessly across desktop and mobile devices.
 - **Swiss Style UI**: Clean, high-contrast, grid-based interface with a focus on functionality and readability.
 
 ## Tech Stack
 
-- React (Vite)
+- Next.js (App Router, SSG)
+- React
 - TypeScript
-- Tailwind CSS v4
+- Tailwind CSS
 - React Leaflet (Maps)
 - Axios (API)
 - Lucide React (Icons)
+- Serwist (Next.js PWA)
 
 ## Setup
 
@@ -43,3 +46,4 @@ A modern, Swiss-Design inspired Pincode Finder for India.
    ```bash
    npm run build
    ```
+   *For testing PWA features, it's recommended to build and then run `npm run start` or deploy.*

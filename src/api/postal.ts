@@ -1,5 +1,5 @@
 import axios from 'axios';
-import type { PostalResponse, GeoLocation } from '../types';
+import type { PostalResponse, GeoLocation } from '@/types';
 
 const POSTAL_API_BASE = 'https://api.postalpincode.in';
 const NOMINATIM_API_BASE = 'https://nominatim.openstreetmap.org';
