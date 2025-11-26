@@ -3,6 +3,7 @@ import { getPincodeDetails } from '@/api/postal';
 import { notFound } from 'next/navigation';
 import { Metadata } from 'next';
 import Link from 'next/link';
+import { ThemeToggle } from '@/components/ThemeToggle';
 
 // This is a Server Component. It fetches data and renders.
 export async function generateStaticParams() {
@@ -79,6 +80,7 @@ export default async function PincodePage({ params }: { params: Promise<{ code: 
                 PINCODE<span className="text-primary">FINDER</span>
             </h1>
         </div>
+        <ThemeToggle />
       </header>
       <main className="container mx-auto p-8 max-w-3xl">
         <h2 className="text-4xl font-display mb-4">{firstPostOffice.Name} ({pincode})</h2>

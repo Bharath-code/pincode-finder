@@ -3,6 +3,8 @@ import { Archivo_Black, IBM_Plex_Sans } from 'next/font/google';
 import './globals.css';
 import { Suspense } from 'react';
 import { WebVitals } from '@/components/WebVitals';
+import { ThemeProvider } from '@/components/ThemeProvider';
+import { Analytics } from "@vercel/analytics/next"
 
 const archivoBlack = Archivo_Black({
   subsets: ['latin'],
@@ -48,12 +50,20 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body className={`${ibmPlexSans.variable} ${archivoBlack.variable}`}>
-        <WebVitals />
-        <Suspense fallback={<div>Loading app...</div>}> {/* Wrap with Suspense */}
-          {children}
-        </Suspense>
+        <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
+          <WebVitals />
+          <Analytics/>
+          <Suspense fallback={<div>Loading app...</div>}> {/* Wrap with Suspense */}
+            {children}
+          </Suspense>
+        </ThemeProvider>
       </body>
     </html>
   );

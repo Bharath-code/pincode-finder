@@ -20,6 +20,7 @@ const HolidayCalendar = dynamic(() => import('@/components/HolidayCalendar').the
 const GoogleAdsense = dynamic(() => import('@/components/GoogleAdsense').then(mod => mod.GoogleAdsense), { ssr: false });
 
 import { checkIsOpen } from '@/components/HolidayCalendar'; // checkIsOpen is a pure function, can be imported directly
+import { ThemeToggle } from '@/components/ThemeToggle';
 import { Globe2, Info, Copy, Check, Navigation } from 'lucide-react';
 import { useSearchParams, useRouter } from 'next/navigation';
 
@@ -287,6 +288,7 @@ export default function Page() { // Changed function name
             POSTAL INDEX NUMBER SERVICE<br/>
             INDIA POST DATA ACCESS
         </div>
+        <ThemeToggle />
       </header>
 
       {/* Main Layout */}

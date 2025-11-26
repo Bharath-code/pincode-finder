@@ -72,13 +72,46 @@
   --radius: 0px;
 }
 
+.dark {
+  --background: 0 0% 5%; /* Darker background #0d0d0d */
+  --foreground: 0 0% 98%; /* Pure white text */
+
+  --card: 0 0% 10%;
+  --card-foreground: 0 0% 98%;
+
+  --popover: 0 0% 5%;
+  --popover-foreground: 0 0% 98%;
+
+  --primary: 358 75% 59%; /* Keep Swiss Red as accent */
+  --primary-foreground: 0 0% 98%;
+
+  --secondary: 0 0% 15%;
+  --secondary-foreground: 0 0% 98%;
+
+  --muted: 0 0% 15%;
+  --muted-foreground: 0 0% 70%; /* Lighter muted text for readability */
+
+  --accent: 358 75% 59%;
+  --accent-foreground: 0 0% 98%;
+
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 0 0% 98%;
+
+  --border: 0 0% 25%; /* Lighter border for visibility against dark bg */
+  --input: 0 0% 25%;
+  --ring: 358 75% 59%;
+}
+
 @layer base {
   * {
-    border-color: var(--color-border);
+    border-color: var(--border); /* Changed from --color-border to --border to match tailwind.config */
   }
   body {
-    background-color: var(--color-background);
-    color: var(--color-foreground);
+    background-color: hsl(var(--background)); /* Use hsl(var(--var)) as Tailwind expects */
+    color: hsl(var(--foreground));
     font-feature-settings: "rlig" 1, "calt" 1;
+  }
+  button, [role="button"] {
+    cursor: pointer;
   }
 }
