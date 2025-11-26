@@ -12,12 +12,13 @@ export function HistoryChips({ history, onSelect, onClear }: HistoryChipsProps) 
     return (
         <div className="mt-6 border-t-2 border-dashed border-black/20 pt-4">
             <div className="flex justify-between items-center mb-2">
-                <h3 className="text-xs font-mono uppercase tracking-widest text-muted-foreground flex items-center gap-2">
+                <h2 className="text-xs font-mono uppercase tracking-widest text-muted-foreground flex items-center gap-2">
                     <Clock className="w-3 h-3" />
                     Recent Memory
-                </h3>
+                </h2>
                 <button 
                     onClick={onClear}
+                    aria-label="Clear all search history"
                     className="text-[10px] font-mono uppercase hover:text-destructive transition-colors"
                 >
                     Clear All

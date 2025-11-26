@@ -5,9 +5,14 @@ import { getPincodeDetails, getPostOfficeDetails, getCoordinates, getPincodeFrom
 import type { PostOffice } from '@/types';
 // Dynamically import client-side components
 import dynamic from 'next/dynamic';
+import { MapSkeleton } from '@/components/MapSkeleton';
+
 const SearchBar = dynamic(() => import('@/components/SearchBar').then(mod => mod.SearchBar), { ssr: false });
 const ResultList = dynamic(() => import('@/components/ResultList').then(mod => mod.ResultList), { ssr: false });
-const MapView = dynamic(() => import('@/components/MapView').then(mod => mod.MapView), { ssr: false });
+const MapView = dynamic(() => import('@/components/MapView').then(mod => mod.MapView), { 
+    ssr: false,
+    loading: () => <MapSkeleton />
+});
 const HistoryChips = dynamic(() => import('@/components/HistoryChips').then(mod => mod.HistoryChips), { ssr: false });
 const FilterBar = dynamic(() => import('@/components/FilterBar').then(mod => mod.FilterBar), { ssr: false });
 const CourierEstimates = dynamic(() => import('@/components/CourierEstimates').then(mod => mod.CourierEstimates), { ssr: false });
@@ -285,11 +290,11 @@ export default function Page() { // Changed function name
       </header>
 
       {/* Main Layout */}
-      <main className="flex-1 flex flex-col lg:flex-row overflow-hidden h-[calc(100vh-88px)]">
+      <main className="flex-1 flex flex-col lg:flex-row lg:overflow-hidden lg:h-[calc(100vh-88px)]">
         
         {/* Left Panel: Search & Results */}
-        <div className="w-full lg:w-1/2 flex flex-col border-r-0 lg:border-r-4 border-black overflow-hidden bg-white relative z-10">
-            <div className="p-8 bg-secondary/30 shrink-0">
+        <div className="w-full lg:w-1/2 flex flex-col border-r-0 lg:border-r-4 border-black bg-white relative z-10">
+            <div className="p-4 sm:p-8 bg-secondary/30 shrink-0">
                 <SearchBar onSearch={handleSearch} onLocate={handleLocateMe} loading={loading} />
                 
                 <HistoryChips 
@@ -308,12 +313,13 @@ export default function Page() { // Changed function name
                 )}
             </div>
 
-            <div className="flex-1 overflow-y-auto">
+            {/* Results Area - Scrolls window on mobile, internal on desktop */}
+            <div className="flex-1 lg:overflow-y-auto min-h-[300px]">
                 {results.length > 0 ? (
                     <>
-                        <div className="sticky top-0 z-20 px-6 py-3 border-y border-black bg-black text-white font-bold font-mono text-sm flex justify-between items-center">
-                            <span>RESULTS FOUND: {filteredResults.length} / {results.length}</span>
-                            <span className="text-xs opacity-70">CLICK TO LOCATE</span>
+                        <div className="sticky top-0 z-20 px-4 sm:px-6 py-3 border-y border-black bg-black text-white font-bold font-mono text-sm flex justify-between items-center">
+                            <span>RESULTS: {filteredResults.length}</span>
+                            <span className="text-xs opacity-70">SELECT TO LOCATE</span>
                         </div>
                         
                         {/* Filter Bar */}
@@ -348,7 +354,7 @@ export default function Page() { // Changed function name
         </div>
 
         {/* Right Panel: Map */}
-        <div className="w-full lg:w-1/2 h-[50vh] lg:h-auto border-t-4 lg:border-t-0 border-black relative z-0">
+        <div className="w-full lg:w-1/2 h-[500px] lg:h-auto border-t-4 lg:border-t-0 border-black relative z-0">
             <MapView lat={location.lat} lon={location.lon} displayName={location.displayName} />
             
             {/* Map Overlay Info */}
