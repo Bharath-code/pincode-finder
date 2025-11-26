@@ -1,7 +1,8 @@
 import type { Metadata, Viewport } from 'next';
 import { Archivo_Black, IBM_Plex_Sans } from 'next/font/google';
 import './globals.css';
-import { Suspense } from 'react'; // Import Suspense
+import { Suspense } from 'react';
+import { WebVitals } from '@/components/WebVitals';
 
 const archivoBlack = Archivo_Black({
   subsets: ['latin'],
@@ -49,6 +50,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${ibmPlexSans.variable} ${archivoBlack.variable}`}>
+        <WebVitals />
         <Suspense fallback={<div>Loading app...</div>}> {/* Wrap with Suspense */}
           {children}
         </Suspense>

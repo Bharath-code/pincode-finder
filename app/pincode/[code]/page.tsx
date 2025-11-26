@@ -27,7 +27,7 @@ export async function generateStaticParams() {
 }
 
 // Generate dynamic metadata for each pincode page
-export async function generateMetadata({ params }: { params: any }): Promise<Metadata> {
+export async function generateMetadata({ params }: { params: { code: string } }): Promise<Metadata> {
   const pincode = params.code;
   const response = await getPincodeDetails(pincode);
 
@@ -60,7 +60,7 @@ export async function generateMetadata({ params }: { params: any }): Promise<Met
   };
 }
 
-export default async function PincodePage({ params }: { params: any }) {
+export default async function PincodePage({ params }: { params: { code: string } }) {
   const pincode = params.code;
 
   const response = await getPincodeDetails(pincode);

@@ -3,12 +3,9 @@ import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
 
 // Fix for default marker icon issues with webpack/vite
-import icon from 'leaflet/dist/images/marker-icon.png';
-import iconShadow from 'leaflet/dist/images/marker-shadow.png';
-
-// Robustly resolve icon URLs for Next.js/Webpack
-const iconUrl = (icon as any).src || (typeof icon === 'string' ? icon : 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon.png');
-const shadowUrl = (iconShadow as any).src || (typeof iconShadow === 'string' ? iconShadow : 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-shadow.png');
+// Using local public assets for better control and potential optimization
+const iconUrl = '/images/leaflet/marker-icon.png';
+const shadowUrl = '/images/leaflet/marker-shadow.png';
 
 const DefaultIcon = L.icon({
     iconUrl,
